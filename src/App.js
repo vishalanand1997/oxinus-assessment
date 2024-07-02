@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import HomePage from "./components/Screens/HomePage";
+import Navigation from "./components/Navigation/Navigation";
+import Menu from "./components/Screens/Menu";
+import MenuCategory from "./components/Screens/MenuCategory";
+import Favorites from "./components/Screens/Favorites";
+import RandomMeal from "./components/Screens/RandomMeal";
+import About from "./components/Screens/About";
+import "./App.css";
+import { MyContextProvider } from "./context/MyContext";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MyContextProvider>
+      <div className="App">
+        <Router>
+          <Navigation />
+          <Routes>
+            <Route exact path="/" element={<HomePage />} />
+            <Route path="/menu" element={<Menu />} />
+            <Route path="/menu/:categoryName" element={<MenuCategory />} />
+            <Route exact path="/favorites" element={<Favorites />} />
+            <Route exact path="/random-meal" element={<RandomMeal />} />
+            <Route exact path="/about" element={<About />} />
+          </Routes>
+        </Router>
+      </div>
+    </MyContextProvider>
   );
-}
+};
 
 export default App;

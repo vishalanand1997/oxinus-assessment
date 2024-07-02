@@ -1,0 +1,49 @@
+.toggleBtnContainer {
+  position: absolute;
+  z-index: 1000;
+  padding: 10px;
+}
+.toggleCrossBtnContainer {
+  position: absolute;
+  z-index: 1000;
+  top: 2%;
+  left: 24%;
+}
+.sidebarListContainer {
+  list-style-type: none;
+  margin: 0;
+  padding: 10px;
+  width: 25%;
+  background-color: #f1f1f1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+.sidebarListContainer > ul > li:last-child {
+  position: absolute;
+  left: 40%;
+  bottom: 10%;
+}
+.sidebarListContainer > ul > li {
+  margin-top: 10px;
+}
+.sidebarListContainer > ul > li > a {
+  display: inline-block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.sidebarListActive {
+  background-color: blueviolet;
+  color: #ffffff !important;
+}
+
+.sidebarListContainer > li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+.icon {
+  font-size: 25px;
+}

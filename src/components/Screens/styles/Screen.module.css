@@ -1,0 +1,84 @@
+.itemContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+  margin: 50px auto;
+}
+
+.itemContainerMenu {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 250px);
+  grid-gap: 20px;
+}
+.itemContainerMenuMeals {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 330px;
+  grid-gap: 20px;
+}
+.itemContainer > li,
+.itemContainerMenu > li,
+.itemContainerMenuMeals > li {
+  border: 1px solid blueviolet;
+  padding: 10px;
+  border-radius: 5px;
+  color: blueviolet;
+  cursor: pointer;
+}
+.titlePage {
+  margin: 0px;
+}
+.menuContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.itemContainerMenu > li,
+.itemContainerMenuMeals > li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.itemContainerMenu > li > img,
+.itemContainerMenuMeals > li > img {
+  margin-right: 10px;
+  border-radius: 10px;
+}
+.desc {
+  width: 80%;
+  margin: 20px auto;
+}
+.unlike,
+.like {
+  width: 10%;
+  font-size: 22px;
+  cursor: pointer;
+}
+.randomMealContainer {
+  padding: 10px;
+}
+
+.randomContainer {
+  border: 1px solid blueviolet;
+  border-radius: 10px;
+  width: 50%;
+  margin: auto;
+}
+
+.randomGenerateBtn {
+  margin: 10px 0px;
+  padding: 10px;
+  background-color: blueviolet;
+  color: #ffffff;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+.randomHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
